@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link href="../css/jquery.cssemoticons.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="../css/tinyscrollbar.css" type="text/css" media="screen"/>
+
+    <script src="../js/libs/jquery.js" type="text/javascript"></script>
+    <script src="../js/libs/jquery.cssemoticons.js" type="text/javascript"></script>
+    <script src="../js/libs/jquery.tinyscrollbar.js" type="text/javascript"></script>
+    <script src="../js/libs/tinyscrollbar.js" type="text/javascript"></script>
+
+    <title>IRC</title>
+</head>
+<body onload="check(), messages()">
+
+    <div class="inputs">
+        <div id="chat-name"> PUBLIC </div>
+        <div class="chat-identity"> 
+            <div id="ucolor"></div>
+            <div id="user-name"> Anon </div>
+        </div>
+    </div>
+
+    
+    <div id="chat-box">
+    </div>
+
+    <form onsubmit="getMessage()">
+
+        <div class="inputs">
+            <input id="mess" class="message-box" type="text" />
+            <input class="send-button" type="submit" value="^" />
+        </div>
+
+    </form>
+
+
+</body>
+<script src="../js/requests.js" type="text/javascript"></script>
+<script src="../js/commands.js" type="text/javascript"></script>
+<script src="../js/load_handler.js" type="text/javascript"></script>
+
+</html>
