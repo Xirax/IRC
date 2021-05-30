@@ -62,18 +62,18 @@ class Requests{
 
             let date = new Date(mess[i].date);
 
-
             let h = Requests.timeParse(date.getHours());
             let min = Requests.timeParse(date.getMinutes());
 
-            let M = Requests.timeParse(date.getMonth());
+            let M = Requests.timeParse(date.getMonth() + 1);
+
 
             let neg_color = parseInt('FFFFFF', 16) - parseInt(mess[i].color, 16);
 
             if(neg_color > 5592405) neg_color = 16777215;
             else neg_color = 0;
             
-            let parsed = h + ':' + min + '  |  ' + date.getDay() + '.' + M;
+            let parsed = h + ':' + min + '  |  ' + date.getDate() + '.' + M;
 
             let mess_div = '<div class="mess-div"> <div class="author" id="A' + i +'">' + mess[i].author + ' </div>';
 
