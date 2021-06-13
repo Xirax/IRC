@@ -9,7 +9,11 @@ class Commands{
 
     static run(cmd){
 
+        console.log('KURWA WYKONUJE SIĘ: ' + cmd);
+
         let args = cmd.split(' ');
+
+        console.log(args[0]);
 
         if(args[0] == "/color") Requests.setColor(args[1]);
         else if(args[0] == "/name")Requests.setName(args[1]);   

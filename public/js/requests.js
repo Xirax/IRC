@@ -11,7 +11,7 @@ class Requests{
             headers: { 'Content-Type': 'application/json'},
 
             body: JSON.stringify(data)
-        });
+        }).then(res =>  res.json()).then(data => {  document.getElementById('user-name').innerHTML = data.value; });
     }
 
 
@@ -36,7 +36,7 @@ class Requests{
             headers: { 'Content-Type': 'application/json'},
 
             body: JSON.stringify(data)
-        }).then(() => { Requests.userInfo(); });;
+        }).then(() => { Requests.userInfo(); document.getElementById('chat-box').innerHTML = ''; });;
     }
 
     static showHistory(){

@@ -158,6 +158,7 @@ router.get('/messages', async function(req, res){
   if(req.session.userID !== undefined){
 
     let messages = await waitForNewMessage(req.session.lastMess, req.session.chat);
+    
     req.session.lastMess = messages.length;
 
     let splited = messages.slice(req.session.firstMess, messages.length);
